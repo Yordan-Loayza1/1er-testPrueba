@@ -11,13 +11,50 @@ img {
     max-width: 100%;
 }
 
-/* contenedor de menu y logo*/
 .header {
+    /* contenedor de menu y logo*/
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 15.625rem;
     height: 8rem;
+    
+}
+
+.header-background {
+    /* imagen de fondo*/
+    background-image: url(/img/site-header-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 35rem;
+    position: relative;
+    padding-left: 5rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header-background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/*titulo principal*/
+.titulo-principal {
+    position: relative;
+    z-index: 2;
+    font-size: 1.7rem;
+    color: #053477;
+    padding-left: 13rem;
+
 }
 
 /* Logo img menu*/
@@ -46,6 +83,7 @@ img {
     font-weight: bold;
     transition: background 0.3s;
     /*animacion cursor por encima*/
+
 }
 
 .nav-menu a[aria-current="page"] {
@@ -58,10 +96,4 @@ img {
 .nav-menu a:hover {
     /*color animacion*/
     background: #838de2;
-}
-
-/*titulo principal*/
-.titulo-principal {
-    font-size: 3.8rem;
-    color: #053477;
 }
